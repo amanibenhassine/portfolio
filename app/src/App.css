@@ -1,0 +1,65 @@
+.navbar{
+  background-color:white;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+span{
+  color:#E96479;
+}
+ul{
+  list-style-type: none;
+  display:flex;
+
+}
+
+ul li a{
+  text-decoration: none;
+  color:black;
+  padding-left: 20px;
+  display: inline-block;
+}
+ul li a::after{
+  content: '';
+  display:block;
+  height: 3px;
+  width: 0;
+  background-color: #E96479;
+  transition: all 0.5s;
+}
+ul li a:hover::after{
+  width: 100%;
+
+
+}
+header{
+  background-color: rgb(197, 121, 21);
+  height: 600px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*section{
+  background-image: url(components/images/vas.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+ min-height:600px;
+}*/
+
+section{
+
+  background-color: #E96479;
+  height: 400px;
+}
+.container{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+border-color: solid black;
+padding-left: 10px;
+}
+.card{
+  padding-left: 10px;
+}
