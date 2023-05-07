@@ -1,4 +1,5 @@
 import './App.css';
+
 import img1 from './images/img-1.png';
 import img2 from './images/img-2.jpg';
 import img3 from './images/img-3.jpg';
@@ -10,7 +11,17 @@ import express from './images/Express.png';
 import mongodb from './images/Mongodb.png';
 import node from './images/Node.png';
 
+
 function App() {
+  const handleDownload = () => {
+    const src = '../file/cv-ameni.png'; 
+    const link = document.createElement('a');
+    link.href = src;
+    link.setAttribute('download', 'cv-ameni.png');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <>
 <div className='navbar'>    
@@ -32,7 +43,7 @@ function App() {
     <div className='item-text'>
       <h3>Hello! I'm </h3>
       <h4>Web <span>Developer</span></h4><br></br>
-      <button className='btn '>Download CV</button>
+      <button className='btn 'onClick={handleDownload}>Download CV</button>
     </div>
     <div className='item-image'>
       <img src={img1} alt='img1' />
@@ -130,23 +141,32 @@ function App() {
     </section>
     
     <footer>
-      <div className='form'>
-      <label for="name">Name:</label>
+  <div className="contact-form">
+    <h3>Contact</h3>
+    <form>
+      <input type="text" name="name" placeholder="Name" />
+      <input type="email" name="email" placeholder="Email" />
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div className="social-media-icons">
+    <h3> Social Media</h3>
+    <ul>
+    <li><a href="#"><i className="fab fa-facebook" size="lg"></i></a></li>
+      <li><a href="#"><i className="fab fa-linkedin"></i></a></li>
+      <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
 
-        <input type='text'></input><br></br>
-        <label for="email">Email:</label>
+</footer>
 
-        <input type='text'></input><br></br>
-        <button className='btn btn-danger'>Cantact</button>
-      </div>
-      <div className='cantact'>
-        <h6 className='fa fa-email'>Mail</h6><br></br>
-        <h6 className='fa fa-adress'>Phone</h6><br></br>
-        <h6 className='fa fa-lindin'>LinkedIn</h6><br></br>
 
-      </div>
 
-    </footer>
+
+
+
+
     
     </>
   );

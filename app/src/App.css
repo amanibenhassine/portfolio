@@ -114,41 +114,7 @@ main{
   min-height: 400px;
 
 }
-footer{
-  background-color: #FF7777;
-  height: 400px;
-  display: flex;
-  justify-content:space-around;
-  padding: 50px;
-}
-.form{
-  padding: 50px;
-  border-radius: 5px;
-}
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-}
-
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
 
 
 
@@ -202,4 +168,101 @@ border-color: none;
 .card-body img{
   max-height: 10rem;
   max-width:12rem;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #E96479;
+  font-size: 14px;
+  color: #333;
+}
+
+.contact-form {
+  flex-basis: 50%;
+}
+
+.contact-form h3 {
+  margin-top: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.social-media-icons {
+  flex-basis: 30%;
+}
+
+.social-media-icons h3 {
+  margin-top: 0;
+}
+
+.social-media-icons ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: inline-flex;
+  font-size: 40px;
+  align-items: center;
+}
+
+.social-media-icons li {
+  margin: 0;
+}
+
+.social-media-icons a {
+  color: #333;
+  padding-left: 20px;
+}
+
+.social-media-icons a:hover {
+  color: #666;
+}
+
+.social-media-icons .fa-facebook:hover {
+  color: #3b5998;
+}
+
+.social-media-icons .fa-linkedin:hover {
+  color: #0077b5;
+}
+
+.social-media-icons .fa-instagram:hover {
+  color: #e1306c;
+}
+
+.social-media-icons .i{
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  
+  .contact-form,
+  .social-media-icons {
+    flex-basis: 100%;
+  }
 }
